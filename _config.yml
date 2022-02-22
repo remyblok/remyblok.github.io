@@ -3,3 +3,9 @@ title: RJB Solutions
 description: Blogging Power Platform and Dev Stuff
 show_downloads: true
 #google_analytics: [Your Google Analytics tracking ID]
+
+defaults:
+  - scope:
+      path: "assets/2021-11-10"
+    values:
+      image: true

@@ -4,6 +4,8 @@ description: Blogging Power Platform and Dev Stuff
 show_downloads: true
 #google_analytics: [Your Google Analytics tracking ID]
 
+excerpt_separator: <!--more-->
+
 defaults:
   - scope:
       path: "assets/2021-11-10"

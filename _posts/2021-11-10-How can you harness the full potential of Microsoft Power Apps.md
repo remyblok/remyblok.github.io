@@ -1,10 +1,8 @@
 ---
 title: How can you harness the full potential of Microsoft Power Apps?
 tags: ["Power Platform",  "Power Apps", "Power Automate", "Microsoft Power Platform", "Low Code", "Fusion Teams", "Model-driven App", "Citizen developer", "Pro dev", "Dataverse" ]
-category: "Power Platform"
-layout: post
+image: /assets/2021-11-10/header.jpg
 ---
-![Header](/assets/2021-11-10/header.jpg)
 
 Microsoft positions Power Apps as a Low Code platform for creating Apps. Power Apps is part of the [Power Platform](https://www.prodwaregroup.com/our-solutions/microsoft-power-platform/), which includes Power BI, Power Automate and Dataverse, all Low Code solutions.
 

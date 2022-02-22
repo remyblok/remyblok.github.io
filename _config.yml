@@ -8,6 +8,11 @@ excerpt_separator: <!--more-->
 
 defaults:
   - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
       path: "assets/2021-11-10"
     values:
       image: true

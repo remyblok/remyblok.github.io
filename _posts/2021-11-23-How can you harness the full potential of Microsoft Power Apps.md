@@ -1,7 +1,7 @@
 ---
 title: How can you harness the full potential of Microsoft Power Apps?
 tags: ["Power Platform",  "Power Apps", "Power Automate", "Microsoft Power Platform", "Low Code", "Fusion Teams", "Model-driven App", "Citizen developer", "Pro dev", "Dataverse" ]
-image: /assets/2021-11-10/header.jpg
+image: /assets/2021-11-23/header.jpg
 ---
 
 Microsoft positions Power Apps as a Low Code platform for creating Apps. Power Apps is part of the [Power Platform](https://www.prodwaregroup.com/our-solutions/microsoft-power-platform/), which includes Power BI, Power Automate and Dataverse, all Low Code solutions.
@@ -11,7 +11,7 @@ On the other hand, Microsoft is also advocating for [Fusion Development teams](h
 In this article we look at [Microsoft Power Apps](https://www.prodwaregroup.com/our-solutions/microsoft-power-platform/microsoft-power-apps/) and the range of possibilities it offers in its toolbox. Plus, what you can do with Low Code development and what the ‘upgrade’ paths are, including High Code solutions, to create an App that meets your requirements.
 <!--more-->
 ## What is a Model-driven Power App?
-![Model-driven App](/assets/2021-11-10/model-driven-app.png)
+![Model-driven App](/assets/2021-11-23/model-driven-app.png)
 
 Let’s start with a Model-driven app. This is the most Low Code app that is available in the toolbox. As the name implies, it is driven by the model. In this context that means the data model of Dataverse. So, the model we create in Dataverse drives how our App behaves. Dataverse gives us the first extension point for our App.
 
@@ -46,7 +46,7 @@ Plug-ins are created using C#/.Net. They can be configured to run at different m
 
 Plug-ins can also be used to add new Actions to an entity. Normally you have “new”, “update”, “delete” etc. But maybe you have a specific action, like ‘Clone’, that needs to be specifically programed. That is also possible using a Plug-in. This action can then be connected to a Command button on the Ribbon of a Form. 
 ## How Power Apps allows us to change the UI behavior for better user experience
-![PCF gallery](/assets/2021-11-10/pcf-gallery.png)
+![PCF gallery](/assets/2021-11-23/pcf-gallery.png)
 
 The possibilities of Dataverse give us many tools to make sure our data is OK and adds additional logic to this. However, the end user will see the UI of the App and interact with that. By default there are standard representations of data, but sometimes we want something different. Maybe we want 5 stars to indicate a rating or to integrate the address with a postal code check.
 ### How do you use components in Power Apps?

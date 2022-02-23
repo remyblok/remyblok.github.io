@@ -1,7 +1,7 @@
 theme: jekyll-theme-architect
 title: RJB Solutions
 description: Blogging Power Platform and Dev Stuff
-show_downloads: true
+show_downloads: false
 #google_analytics: [Your Google Analytics tracking ID]
 
 excerpt_separator: <!--more-->

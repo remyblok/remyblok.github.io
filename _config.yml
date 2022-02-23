@@ -1,6 +1,4 @@
-#theme: jekyll-theme-architect
 remote_theme: remyblok/architect
-#remote_theme: pages-themes/architect@v0.2.0
 title: RJB Solutions
 description: Blogging Power Platform and Dev Stuff
 show_downloads: false

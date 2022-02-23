@@ -1,5 +1,5 @@
 #theme: jekyll-theme-architect
-remote_theme: remyblok/architect-dark
+remote_theme: remyblok/architect-dark@v0.2.0
 title: RJB Solutions
 description: Blogging Power Platform and Dev Stuff
 show_downloads: false
@@ -18,3 +18,5 @@ defaults:
     values:
       image: true
 
+plugins:
+- jekyll-remote-theme

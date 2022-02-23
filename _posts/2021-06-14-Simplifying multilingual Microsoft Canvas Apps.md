@@ -19,7 +19,7 @@ The core issue I have with these solutions is that they are all based on using �
 
 ![Translation using Lookup](/assets/2021-06-14/lookup1.png)
 
-```Power Fx
+```PowerFx
 LookUp('Resource Strings', Key = "AppTitle" And Language.'ISO Code' = Language(), Value)
 ```
 
@@ -27,7 +27,7 @@ After this article you will be able to write just this:
 
 ![Translation using this method](/assets/2021-06-14/varstrings1.png)
 
-```Power Fx
+```PowerFx
 varStrings.AppTitle
 ```
 ## Power Apps translations in practice
@@ -37,7 +37,7 @@ This is not a very complex example. The original expression works fine for these
 
 Let’s build that text using an expression:
 
-```Power Fx
+```PowerFx
 LookUp(
     'Resource Strings',
     Key = "On" And Language.'ISO Code' = Language(),
@@ -63,7 +63,7 @@ So, let’s try to fix this by using a ‘template’; a text that contains plac
 
 Using the `Substitute()`-function in the expression we can then replace the `{0}` and `{1}` with the correct values. We can also define an extra `DateFormat` that holds how the date needs to be formatted in a specific language. Combine that and we get the following Expression:
 
-```Power Fx
+```PowerFx
 Substitute(
     Substitute(
         LookUp(
@@ -90,7 +90,7 @@ There is a lot to unpack here, so the expression is no longer easy to understand
 ## Explaining the multilingual app solution - how var strings helps
 In this solution we will be separating the translation logic and the business logic. The goal is to have the following expression, based on the previous example. It focusses just on the business logic. In this case, the substitution of the correct values.
 
-```Power Fx
+```PowerFx
 Substitute(
     Substitute(
         varStrings.HasReservation,
@@ -113,7 +113,7 @@ So how does this work?
 
 ![Set varStrings](/assets/2021-06-14/setvarstrings1.png)
 
-```Power Fx
+```PowerFx
 Set(varStrings, {
         AppTitle: LookUp('Resource Strings', Key = "AppTitle" And Language.'ISO Code' = Language(), Value),
         HasReservation: LookUp('Resource Strings', Key = "HasReservation" And Language.'ISO Code' = Language(), Value),
@@ -127,7 +127,7 @@ Using Records is a very useful feature. Especially since you can nest records in
  
 ![Structure in varStrings](/assets/2021-06-14/setvarstrings2.png)
 
-```Power Fx
+```PowerFx
 Set(varStrings, {
     Global: {
         AppTitle: LookUp('Resource Strings', Key = "AppTitle" And Language.'ISO Code' = Language(), Value),

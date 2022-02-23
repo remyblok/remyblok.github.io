@@ -3,8 +3,8 @@ layout: default
 ---
 <h1>{{ page.title }}</h1>
 <p>{{ page.date | date: "%Y-%m-%d" }}</p>
-{{ if page.image }}
+{% if page.image %}
     <p><img alt="header" src="{{ page.image }}"></p>
-{{ endif }}
+{% endif %}
 
 {{ content }}

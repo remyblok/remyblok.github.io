@@ -10,7 +10,7 @@ When using the functionality build into the Code Pack it is mandatory that the t
 
 I created a call to `SHAddToRecentDocs` with as parameter an `IShellLink`. Although `IShellLink` is defined by the Code Pack, the Interface is not publicly accessible therefore we need to define it again. Unfortunately we also need to redefine the `ShellAddToRecentDocs` because it, too, is internally defined the Code Pack.
 
-```C#
+```csharp
 [ComImport,
     Guid("000214F9-0000-0000-C000-000000000046"),
     InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
@@ -35,7 +35,7 @@ internal enum ShellAddToRecentDocs
 
 We don’t have to actually define body of the interface, because we only use it as a definition for the underlying COM interface. The Code Pack does provide a wrapper around `IShellLinks` called `JumpListLink`. With this class we can create a simple link to any application or document we want.
 
-```C#
+```csharp
 // Create a JumpListLink with the path of the application and the name of the file
 // the name is displayed in the recent items list
 JumpListLink link = new JumpListLink(@"c:\windows\notepad.exe", "notepad");
@@ -45,7 +45,7 @@ link.IconReference = new IconReference(@"c:\windows\notepad.exe", 0); //set an i
 
 The problem is that a `JumpListItem` is not an `IShellLinkW`. There is an internal property on `JumpListItem` to get an `IShellLinkW` object. I used reflection to get the value of this internal property. After reading the value of the property it can be used to call the `SHAddToRecentDocs` we just defined.
 
-```C#
+```csharp
 private static MethodInfo nativeShellLinkGetMethod;
  
 public static void AddToRecent(JumpListLink link)
@@ -75,7 +75,7 @@ public static void AddToRecent(JumpListLink link)
 
 All that rests is to call the `AddToRecent` method and send the link along.
 
-```C#
+```csharp
 AddToRecent(link);
 ```
 

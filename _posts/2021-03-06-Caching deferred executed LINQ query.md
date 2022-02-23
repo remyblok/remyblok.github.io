@@ -3,7 +3,7 @@ title: Caching deferred executed LINQ query
 tags: [".Net",  "C#", "LINQ", "Performance", "Cache"]
 ---
 When using LINQ extensively you'll eventually encounter the benefits and the cruelties of deferred execution. When not used correctly it can have a serious performance impact. In this blog I will give a method that combines the benefits of deferred execution with the safety of direct execution.
-
+<!--more-->
 Lets take a closer look at deferred execution. It means that a LINQ query is not executed when you instantiate it, but is executed when you iterate over the produced `IEnumerable`. Under the hood the LINQ query creates a wrapper object that holds all information you defined in your query. It also implements `IEnumerable` so it can be used in foreach-loops and other LINQ expressions.
 
 When you loop over the wrapper `IEnumerable` the actual LINQ logic is executed and then the code, e.g. where, order, grouping etc., you have defined in your query is applied. It also means that the query is executed every time you iterate over the wrapper. If you are ordering a collection of a few thousand items this can cause a serious performance penalty, for example.

@@ -2,9 +2,8 @@
 title: Converting Certificate to use CSP Storage Provider in stead of CNG Storage Provider
 tags: ["development", "certificate", "csp", "cng", "storage provider", ".net"]
 ---
-
 Certificates are used all over the world nowadays. And during development you often need to work with them. Certificates are also used to sign code, i.e. to add a verification to the exe/dll/msi that the file has not been tempered with and is an original from the creator of the software. This is called Authenticode. I have had multiple instances where the certificate that was to be used for Code Signing was a not compatible. This blog explains how to make it compatible.
-
+<!--more-->
 Certificates in Windows are stored using Storage Providers. Windows has two of these providers, that are not compatible. The old style "Cryptographic Service Providers" or CSP in short and the new style "Cryptography API: Next Generation" or CNG. The CNG providers have been around since Windows Vista, and although it is more secure and easier to use many software is still not compatible with CNG providers. Authenticode is one of the parts that does not work with CNG. For more information regarding CSP, CNG and their application support please refer to the linked blog.
 
 In the instances I encountered the Code Signing certificate was always stored by a CNG provider and thus not compatible for Code Signing. Scattered around the internet there are bits and pieces on how to convert a CNG stored certificate to a CSP stored certificate, but there is no clear how-to. This blog will bundle all the bits into a single procedure to follow on how to convert the certificate.

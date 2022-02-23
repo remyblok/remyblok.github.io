@@ -7,7 +7,7 @@ When developing you often need to use the Command Prompt (cmd.exe) to do somethi
 Windows provides all kinds of ways to start a Command Prompt: start cmd.exe, Shift+right click a folder, from the File menu in windows 8 etc. But only when the special "Developer Command Prompt" link is used the Command prompt is actually started with the special environment.
 
 That makes it very cumbersome to use the Command prompt, because it is easy to open it from all kinds of places, but when you need to use a CLI app from Visual Studio you need to start another Command Prompt and do your stuff again. Especially when starting the Command Prompt as Administrator is not easy, because the path is never correct. I wanted to fix that.
-
+<!--more-->
 Under the hood the "Developer Command Prompt" starts a batch file that does all the magic:
 
 ```cmd

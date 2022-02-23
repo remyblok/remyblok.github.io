@@ -1,9 +1,9 @@
 ---
 title: WPF Combo box with empty item using .Net 4 dynamic objects
-tags: [".Net",  "C#", "WPF"]
+tags: [".Net",  "C#", "WPF", "combobox", "dynamic", "dynamic object", "combo box" ]
 ---
 From the moment I’ve started to use WPF I have struggled to get a selectable empty item in a combo box. This is not something that WPF supports out of the box. I had sincerely hoped they would fix this in WPF 4.0, but unfortunately they did not. They did give us dynamic object, which makes the task a lot easier that it was in WPF 3.5.
-
+<!--more-->
 There are some solutions to do this in .Net 3.5 like WPF `ComboBox` with empty item on Stack Overflow, but those solutions have some serious limitations. The solution I present is based on another article that uses dynamics to get an extra empty item. That solution has a serious problem if the Type displayed in the combo box does not have a default constructor, the `Activator` will be unable to create an instance. It also requires a generic collection as input, where some specific collections are not generic and thus cannot be used.
 
 Just as the previous examples, my solution uses a `Converter` to add an extra item to the returned collection. But instead of adding an item of the same type I add a dynamic object. Dynamic objects can pretend to contain any property or method. So my dynamic object pretend to contain all the properties of the other items in the collection, but all its values are null. How does this look in code:

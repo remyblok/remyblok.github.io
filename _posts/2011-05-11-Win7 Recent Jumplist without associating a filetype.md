@@ -5,7 +5,7 @@ tags: [".Net",  "C#", "jumplist", "Windows 7", "Windows", "Win32", "interop" ]
 I was trying to add [Windows 7 Jumplists](http://windows.microsoft.com/nl-NL/windows7/products/features/jump-lists) to an .Net 3.5 application. I wanted to add a list of recent opened files. When using .Net 4.0 there is native Framework support in [System.Windows.Shell](http://msdn.microsoft.com/en-us/library/system.windows.shell.aspx)
 
 When interacting with Windows 7 features I always use the [Windows Api Code Pack](http://archive.msdn.microsoft.com/WindowsAPICodePack). It's a library containing all kinds of functionality that is not a part of the .Net framework, but can be reached through the Win32 api. Jumplist support is one of these features.
-
+<!--more-->
 When using the functionality build into the Code Pack it is mandatory that the type of file that is added to the JumpList is associated with the program. My application does not have files, at least not on disk. So there is no association with any file type. Under the hood the Code Pack uses the Win32 function [SHAddToRecentDocs](http://msdn.microsoft.com/en-us/library/bb762105(VS.85).aspx). Reading the MSDN page makes it clear that there are other ways to add items to the Recent list: An `IShellLink` object that identifies the item through a shortcut.
 
 I created a call to `SHAddToRecentDocs` with as parameter an `IShellLink`. Although `IShellLink` is defined by the Code Pack, the Interface is not publicly accessible therefore we need to define it again. Unfortunately we also need to redefine the `ShellAddToRecentDocs` because it, too, is internally defined the Code Pack.

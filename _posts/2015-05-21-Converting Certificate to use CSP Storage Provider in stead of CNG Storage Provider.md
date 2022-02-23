@@ -39,7 +39,8 @@ Of the Certificates where you have a private key the provider is listed. in this
 
 ## Process
 The process is pretty easy and is depicted in the following image. Basically it is a process of stripping the certificate into separate parts and then combining them again into a valid certificate.
-http://static.tweakers.net/ext/f/kTFAva0zF3LxgpDCN39dnORK/full.png
+
+![Process](/assets/2015-05-21/process.png)
 
 ### Prerequisites
 As you can see there are some tool used in the conversion. Make sure you have the following tools installed.

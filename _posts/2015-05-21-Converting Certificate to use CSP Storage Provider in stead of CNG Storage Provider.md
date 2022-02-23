@@ -12,7 +12,7 @@ In the instances I encountered the Code Signing certificate was always stored by
 The first indication that your certificate is not using the supported Storage Provider is the fact you cannot select it in Visual Studio when you want to use it to Sign a ClickOnce manifest. Also if you use `SignTool.exe` to sign your compiled files you get a message like "Invalid provider type specified".
 
 You can look up the Storage Provider that is used using `CertUtil.exe` like this:
-```cmd
+```batchfile
 CertUtil.exe -store -user my
 ```
 
@@ -69,13 +69,12 @@ Next you need to export the private key of the certificate using OpenSSL. This w
 - Open a command prompt
 - Go into the OpenSSL installation directory
 - Execute the following command
-    ```cmd
+    ```batchfile
     openssl.exe pkcs12 -in <original pfx file>.pfx -nocerts -out <pem file location>.pem
     
     for example:
     openssl.exe pkcs12 -in "C:\certificate\original cert.pfx" -nocerts -out "C:\certificate\certificate.pem"
     ``` 
-
     - The requested Import Password is the password of the PFX file
     - The requested PEM pass phrase is just temporary, but make sure you remember it for the following step
     - Make sure you include the full paths to the pfx and pem files and watch the quotes
@@ -87,7 +86,7 @@ Now the pem is converted is converted into a PVK file. PVK is a container for Pr
 - Open a command prompt
 - Go into the directory where you placed pvk.exe
 - Execute the following command
-    ```cmd
+    ```batchfile
     pvk.exe -in <pem file location>.pem -topvk -strong -out <pvk file location>.pvk
 
     for example:
@@ -103,14 +102,12 @@ Now we have the Public key in the cer file and the Private key in the pvk file. 
 - Open a command prompt
 - Go into the directory where you installed the Windows Driver Development Kit
 - Execute the following command
-
-    ```cmd
+    ```batchfile
     pvk2pfx.exe -pvk <pvk file location>.pvk -pi <pvk password> -spc <pvk file location>.cer -pfx <new pfx file location>.pfx -po <pfx password>
 
     for example:
     pvk2pfx.exe -pvk "C:\certificate\certificate.pvk" -pi temp -spc "C:\certificate\certificate.cer" -pfx C:\certificate\new cert.pfx" -po 1337HiddenPassw0rd!
     ```
-
     - The pvk password is the password you entered in the previous step
     - The pfx password is the password for the new pfx file. Make sure this is a decent password or reuse the password from the original pfx
     - do not override the original pfx file until proven the procedure was successful

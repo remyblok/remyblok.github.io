@@ -8,7 +8,7 @@ There are some solutions to do this in .Net 3.5 like WPF `ComboBox` with empty i
 
 Just as the previous examples, my solution uses a `Converter` to add an extra item to the returned collection. But instead of adding an item of the same type I add a dynamic object. Dynamic objects can pretend to contain any property or method. So my dynamic object pretend to contain all the properties of the other items in the collection, but all its values are null. How does this look in code:
 
-```C#
+```csharp
 public class ComboBoxEmptyItemConverter : IValueConverter
 {
     /// <summary>

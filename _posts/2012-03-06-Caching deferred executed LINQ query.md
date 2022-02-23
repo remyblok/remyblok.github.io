@@ -12,7 +12,7 @@ There are methods to 'disable' deferred execution. Each `IEnumerable` has the `T
 
 The following codes defines two LINQ queries. The first query is used in the loop, the second query is used as lookup by use of the `FirstOrDefault` method.
 
-```C#
+```csharp
 var appointments = from a in dataStore
                    where a.StartDate < DateTime.Now
                    select a;
@@ -38,7 +38,7 @@ Due to deferred execution for each appointment where I am the organizer it will 
 
 Let's introduce `ToList` to alleviate the performance penalty caused by deferred execution:
 
-```C#
+```csharp
 var appointments = from a in dataStore
                    where a.StartDate < DateTime.Now
                    select a;
@@ -65,7 +65,7 @@ This sounds as the solution, but what if the appointments do not contain any ite
 
 As a solution for this problem I created the Cache-method. This methods combines deferred execution and the static list to make sure the best performance is achieved.
 
-```C#
+```csharp
 var appointments = from a in dataStore
                    where a.StartDate < DateTime.Now
                    select a;
@@ -92,7 +92,7 @@ This way we only have the 10 seconds hit once, but only if we're sure that the d
 
 Finally the code inside the Cache-method that makes the magic happen:
 
-```C#
+```csharp
 public static class EnumerableExtensions
 {
     /// <summary>

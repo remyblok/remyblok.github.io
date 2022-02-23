@@ -10,7 +10,7 @@ That makes it very cumbersome to use the Command prompt, because it is easy to o
 <!--more-->
 Under the hood the "Developer Command Prompt" starts a batch file that does all the magic:
 
-```cmd
+```batchfile
 "C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\VsDevCmd.bat"
 ```
 
@@ -25,7 +25,7 @@ Key: AutoRun as Reg_SZ / String
 
 I tried putting the VsDevCmd.bat directly in the registry, but this does not work. The batch file starts another instance of cmd, with in turn autoruns the VsDevCmd batch file. This is a never ending loop. So you will need a special batch file that breaks the loop. I have created the following batch file and saved that to my document folder. This batch file is referenced in the registry in the AutoRun key
 
-```cmd
+```batchfile
 @ECHO OFF
 IF "%VsDevCmdRan%" EQU "1" GOTO :EOF
 SET VsDevCmdRan=1
@@ -40,7 +40,7 @@ Now whenever a Command Prompt is started under the hood the VsDevCmd.bat is call
 Maybe you might want to start a Command Prompt without the VsDevCmd.bat started. This is possible without changing the Registry. You can run the following command:
 code:
 
-```cmd
+```batchfile
 cmd.exe /d
 ```
 

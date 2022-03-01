@@ -3,6 +3,7 @@ title: RJB Solutions
 description: Blogging Power Platform and Dev Stuff
 show_downloads: false
 #google_analytics: [Your Google Analytics tracking ID]
+microsoft_appinsights: InstrumentationKey=732ae943-1d5a-4605-a3e4-cc174e5cd581;IngestionEndpoint=https://westeurope-5.in.applicationinsights.azure.com/
 
 excerpt_separator: <!--more-->
 

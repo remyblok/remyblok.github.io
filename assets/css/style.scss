@@ -18,4 +18,20 @@
     }
   }
 }
-  
+
+p.meta {
+  span {
+    display: inline-block;
+    margin-right: 10px;
+
+    a:not(:last-child):after {
+      content: ', ';
+    }
+
+    a:not(:hover) {
+      @include themeProperty((
+        color: #666 #fafafa,
+      ));
+    }
+  }
+}

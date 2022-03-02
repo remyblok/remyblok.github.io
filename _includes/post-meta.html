@@ -1,0 +1,11 @@
+<p class="meta">
+    <span class="publish-date"><i class="fa-solid fa-calendar"></i> {{ page.date | default:post.date | date: "%Y-%m-%d" }}</span>
+    {% assign tags = page.tags | default: post.tags %}
+    <span class="tags">
+        <i class="fa-solid fa-tags"></i>
+        {% for tag in tags limit: 3 %}
+            {% assign tagname = tag | slugify %}
+            <a href="{{ '/tags/#' | append: tagname | relative_url }}">{{ tag }}</a>
+        {% endfor %}
+    </span>
+</p>

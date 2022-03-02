@@ -6,17 +6,19 @@ show_downloads: false
 microsoft_appinsights: InstrumentationKey=732ae943-1d5a-4605-a3e4-cc174e5cd581;IngestionEndpoint=https://westeurope-5.in.applicationinsights.azure.com/
 
 excerpt_separator: <!--more-->
+permalink: /posts/:year/:month/:day/:title/
 
 defaults:
+  - scope:
+      path: "assets/pages"
+    values:
+      layout: "default"
   - scope:
       path: "_posts"
       type: "posts"
     values:
       layout: "post"
-  - scope:
-      path: "assets/2021-11-10"
-    values:
-      image: true
+
 
 plugins:
 - jekyll-remote-theme

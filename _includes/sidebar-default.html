@@ -1,7 +1,9 @@
-{% assign pages = site.pages | where: "layout", "default" | sort: "menu-sort" %}
-{% for page in pages %}
-    <div><a href="{{page.url}}">{{page.menu-title | default: page.title }}</a></div>
-{% endfor %}
+<section class="menu">
+  {% assign pages = site.pages | where: "layout", "default" | sort: "menu-sort" %}
+  {% for page in pages %}
+      <a href="{{page.url}}"><h1>{{page.menu-title | default: page.title }}</h1></a>
+  {% endfor %}
+</section>
 
 <hr>
 {% if site.github.is_project_page %}

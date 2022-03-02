@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
+html {
+  overflow-y: scroll;
+}
+
 #posts {
   h2 {
     .title:hover {
@@ -33,5 +37,20 @@ p.meta {
         color: #666 #fafafa,
       ));
     }
+  }
+}
+
+aside .menu {
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+
+  a:not(:hover) {
+    @include themeProperty((
+      color: #666 #fafafa,
+    ));
+  }
+
+  & h1:before{
+    content: "/";
+    letter-spacing: 4px;
   }
 }

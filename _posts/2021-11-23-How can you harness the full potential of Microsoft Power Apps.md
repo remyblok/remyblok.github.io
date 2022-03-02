@@ -1,6 +1,6 @@
 ---
 title: How can you harness the full potential of Microsoft Power Apps?
-tags: ["Power Platform",  "Power Apps", "Power Automate", "Microsoft Power Platform", "Low Code", "Fusion Teams", "Model-driven App", "Citizen developer", "Pro dev", "Dataverse" ]
+tags: ["Power Platform", "Power Apps", "Power Automate", "Microsoft Power Platform", "Low Code", "Fusion Teams", "Model-driven App", "Citizen developer", "Pro dev", "Dataverse" ]
 image: /assets/2021-11-23/header.jpg
 ---
 

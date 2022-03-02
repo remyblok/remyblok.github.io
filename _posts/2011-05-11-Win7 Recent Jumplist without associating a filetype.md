@@ -1,6 +1,6 @@
 ---
 title: Win7 Recent Jumplist without associating a filetype
-tags: [".Net",  "C#", "jumplist", "Windows 7", "Windows", "Win32", "interop" ]
+tags: [".Net",  "C#", "Jumplist", "Windows", "Win32 interop" ]
 ---
 I was trying to add [Windows 7 Jumplists](http://windows.microsoft.com/nl-NL/windows7/products/features/jump-lists) to an .Net 3.5 application. I wanted to add a list of recent opened files. When using .Net 4.0 there is native Framework support in [System.Windows.Shell](http://msdn.microsoft.com/en-us/library/system.windows.shell.aspx)
 

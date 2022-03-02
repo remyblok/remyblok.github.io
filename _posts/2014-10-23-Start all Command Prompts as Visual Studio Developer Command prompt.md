@@ -1,6 +1,6 @@
 ---
 title: Start all Command Prompts as Visual Studio Developer Command prompt
-tags: [".Net",  "C#", "Developer", "cmd", "command prompt", "visual studio"]
+tags: [".Net",  "C#", "Developer", "Command prompt", "Visual Studio"]
 ---
 When developing you often need to use the Command Prompt (cmd.exe) to do something for which there is no easy UI. Visual Studio and Windows SDKs include many CLI applications. It also includes the Visual Studio Command Prompt. This command prompt calls a script that sets all kinds of environment variables so that the CLI apps can be easily started.
 

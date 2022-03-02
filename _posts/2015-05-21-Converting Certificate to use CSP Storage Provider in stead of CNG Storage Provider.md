@@ -1,6 +1,6 @@
 ---
 title: Converting Certificate to use CSP Storage Provider in stead of CNG Storage Provider
-tags: ["development", "certificate", "csp", "cng", "storage provider", ".net"]
+tags: ["Development", "Certificates", ".Net"]
 ---
 Certificates are used all over the world nowadays. And during development you often need to work with them. Certificates are also used to sign code, i.e. to add a verification to the exe/dll/msi that the file has not been tempered with and is an original from the creator of the software. This is called Authenticode. I have had multiple instances where the certificate that was to be used for Code Signing was a not compatible. This blog explains how to make it compatible.
 <!--more-->

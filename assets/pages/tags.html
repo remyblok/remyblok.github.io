@@ -4,9 +4,27 @@ permalink: /tags/
 menu-sort: 3
 ---
 <h1>Tagged with ...</h1>
+<div id="all-tags" class="all">
+  <style>
+    .show-all {
+      float: right;
+    }
+    #all-tags.all .show-all {
+      display: none;
+    }
+  </style>
+  <a href="#" class="show-all">Show all tags</a>
 {% assign tags = site.tags | sort %}
 {% for tag in tags %}
   {% assign tagname = tag | first | slugify %}
+  <style>
+    #all-tags:not(.all) #{{ tagname }} {
+      display: none;
+    }
+    #all-tags.{{ tagname }} #{{ tagname }} {
+      display: block;
+    }
+  </style>
   <div id="{{ tagname }}" class="tag">
     <h2>{{ tag[0] }}</h2>
     {% assign posts = tag[1] %}
@@ -19,3 +37,17 @@ menu-sort: 3
     </ul>
   </div>
 {% endfor %}
+</div>
+
+<script>
+  function applyHash()
+  {
+    var elem = document.getElementById("all-tags");
+    if (window.location.hash)
+      elem.className = window.location.hash.slice(1);
+    else
+      elem.className = "all";
+  }
+  window.addEventListener("hashchange", applyHash, false);
+  applyHash();
+</script>

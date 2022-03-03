@@ -41,16 +41,47 @@ p.meta {
 }
 
 aside .menu {
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  h1 {
+    font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+    margin: 0.3em 0 0 0;
+  }
 
   a:not(:hover) {
     @include themeProperty((
-      color: #666 #fafafa,
+      color: #a895cb #fafafa,
     ));
   }
 
   & h1:before{
     content: "/";
     letter-spacing: 4px;
+  }
+
+  ul {
+    list-style: '# ';
+    margin-top: 6px;
+  }
+
+  ::marker {
+    font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+  }
+}
+
+.profile-pic {
+  float: right;
+  width: 230px;
+  margin-left: 20px;
+  margin: 0 0 12px 12px;
+
+  &:before
+  {
+    display:block;
+    content:'';
+    position:absolute;
+    width: 230px;
+    height: 267px;
+    @include themeProperty((
+      box-shadow: (inset 0px 0px 5px 5px #fafafa) (inset 0px 0px 5px 5px #191919)
+    ));
   }
 }

@@ -85,3 +85,17 @@ aside .menu {
     ));
   }
 }
+
+#all-tags {
+  .show-all {
+    float: right;
+  }
+  
+  &.all .show-all {
+    display: none;
+  }
+
+  &:not(.all) .tag {
+    display: none;
+  }
+}

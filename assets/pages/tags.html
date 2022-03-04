@@ -5,26 +5,12 @@ menu-sort: 3
 ---
 <h1>Tagged with ...</h1>
 <div id="all-tags" class="all">
-  <style>
-    .show-all {
-      float: right;
-    }
-    #all-tags.all .show-all {
-      display: none;
-    }
-  </style>
   <a href="#" class="show-all">Show all tags</a>
 {% assign tags = site.tags | sort %}
+{% assign styleTags = "" %}
 {% for tag in tags %}
   {% assign tagname = tag | first | slugify %}
-  <style>
-    #all-tags:not(.all) #{{ tagname }} {
-      display: none;
-    }
-    #all-tags.{{ tagname }} #{{ tagname }} {
-      display: block;
-    }
-  </style>
+  {% assign styleTags = styleTags | append: "#all-tags." | append: tagname | append: " #" | append: tagname | append: ", " %}
   <div id="{{ tagname }}" class="tag">
     <h2>{{ tag[0] }}</h2>
     {% assign posts = tag[1] %}
@@ -38,6 +24,9 @@ menu-sort: 3
   </div>
 {% endfor %}
 </div>
+<style>
+  {{ styleTags }} #no-op { display: block; }
+</style>
 
 <script>
   function applyHash()

@@ -1,6 +1,5 @@
 ---
 ---
-
 @import "{{ site.theme }}";
 
 html {
@@ -60,6 +59,12 @@ aside .menu {
   ul {
     list-style: '# ';
     margin-top: 6px;
+
+    a:hover {
+      @include themeProperty((
+        color: #543c7b #a895cb,
+      ));
+    }
   }
 
   ::marker {

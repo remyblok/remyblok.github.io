@@ -3,13 +3,12 @@ permalink: /
 menu-title: Home
 menu-sort: 1
 ---
-<h1>Latest Posts</h1>
 <div id="posts">
 {% for post in site.posts limit: 3 %}
   <a href="{{ post.url }}">
-    <h2><span class="title">{{ post.title }}</span>
+    <h1><span class="title">{{ post.title }}</span>
       <span class="continue"> continue reading &gt;&gt;</span>
-    </h2>
+    </h1>
   </a>
   {% include post-meta.html %}
   {{ post.excerpt }}

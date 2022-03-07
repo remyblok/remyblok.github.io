@@ -1,4 +1,4 @@
-<p class="meta {% if page.coauthor %}coauthor{% endif %}">
+<p class="meta {% if page.coauthors %}coauthors{% endif %}">
     <span class="publish-date"><i class="fa-solid fa-calendar"></i> {{ page.date | default:post.date | date: "%Y-%m-%d" }}</span>
     {% assign tags = page.tags | default: post.tags %}
     <span class="tags">
@@ -8,8 +8,11 @@
             <a href="{{ '/tags/#' | append: tagname | relative_url }}">{{ tag }}</a>
         {% endfor %}
     </span>
-    {% if page.coauthor %}
+    {% if page.coauthors %}
         <br>
-        <i class="fa-solid fa-user-group"></i> This article is co-authored by <a href="page.coauthor.linkedin">{{ page.coauthor.name }}</a>
+        <i class="fa-solid fa-user-group"></i> This article is co-authored by 
+        {% for coauthor in page.coauthors %}
+            <a class="coauthor" href="coauthor.linkedin">{{ coauthor.name }}</a>
+        {% endfor %}
     {% endif %}
 </p>

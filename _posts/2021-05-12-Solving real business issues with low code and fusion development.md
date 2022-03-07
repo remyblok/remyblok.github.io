@@ -2,16 +2,16 @@
 title: Solving real business issues with low code and fusion development – how to do it.
 tags: ["Power Platform",  "Fusion Development", "Low Code"]
 image: /assets/2021-05-12/header.jpg
-coauthor: 
-  name: Joop Melchers 
-  linkedin: https://www.linkedin.com/in/joopmelchers/
+coauthors: 
+  - name: Joop Melchers 
+    linkedin: https://www.linkedin.com/in/joopmelchers/
 ---
 How can low code platform and fusion development help organizations to accelerate their digital transformation? With this article I will give my view and some advice on this question.
 
 Most of us are involved in the digital transformation process to transform our organization to become more digital and ready for today’s challenges. Last year a lot of companies had to speed up their transformation because of the COVID-19 situation. Many needed to create an online presence to do business. Also their internal processes needed to be automated for a paperless office to keep work together, for example approval flows for orders or virtual agents to assist with finding information.
 
 One way to speed up development of business solutions to meet these needs is to use a low code platform, like the [Microsoft Power Platform](https://www.prodwaregroup.com/our-solutions/microsoft-power-platform/). A capable low code platform makes it possible for non-IT people like business users to develop solutions, so-called citizen developers. 
-
+<!--more-->
 This has two major advantages. Primarily these citizen developers have the business knowledge about what functionality needs to be built. The second is that it solves the shortage of professional developers. 
 
 Currently there is a shortage of developers and budget to implement all the necessary business apps. Low code platforms enable citizen developers (business users) to develop the business apps and therefore there is a lesser need to hire consultants and/or developers. 

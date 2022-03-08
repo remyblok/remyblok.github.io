@@ -1,14 +1,20 @@
 ---
 ---
-
 @import "{{ site.theme }}";
 
-#posts {
-  h2 {
-    .title:hover {
-      color: #543c7b;
-    }
+html {
+  overflow-y: scroll;
+}
+
+#main-content {
+  p > img:only-child {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
   }
+}
+
+#posts {
   span.continue {
     font-size: 17px;
     color: #a895cb;
@@ -18,4 +24,98 @@
     }
   }
 }
+
+p.meta {
+  &.coauthors .publish-date .fa-calendar{
+    margin: 0 3.5px;
+  }
+
+  span {
+    display: inline-block;
+    margin-right: 10px;
+
+    a:not(:last-child):after {
+      content: ', ';
+    }
+  }
+
+  a:not(:hover), a:hover:after {
+    @include themeProperty((
+      color: #666 #fafafa,
+    ));
+  }
+
+  a:not(:last-child):after {
+    content: ', ';
+  }
+
+  a:nth-last-child(2):after {
+    content: ' and ';
+  }
+}
+
+aside .menu {
+  h1 {
+    font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+    margin: 0.3em 0 0 0;
+  }
+
+  a:not(:hover) {
+    @include themeProperty((
+      color: #a895cb #fafafa,
+    ));
+  }
+
+  & h1:before{
+    content: "/";
+    letter-spacing: 4px;
+  }
+
+  ul {
+    list-style: '# ';
+    margin-top: 6px;
+
+    a:hover {
+      @include themeProperty((
+        color: #543c7b #a895cb,
+      ));
+    }
+  }
+
+  ::marker {
+    font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+  }
+}
+
+.profile-pic {
+  float: right;
+  width: 230px;
+  margin-left: 20px;
+  margin: 0 0 12px 12px;
+
+  &:before
+  {
+    display:block;
+    content:'';
+    position:absolute;
+    width: 230px;
+    height: 267px;
+    @include themeProperty((
+      box-shadow: (inset 0px 0px 5px 5px #fafafa) (inset 0px 0px 5px 5px #191919)
+    ));
+  }
+}
+
+#all-tags {
+  .show-all {
+    float: right;
+  }
   
+  &.all .show-all {
+    display: none;
+  }
+
+  &:not(.all) .tag {
+    display: none;
+  }
+}

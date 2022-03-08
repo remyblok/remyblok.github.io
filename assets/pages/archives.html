@@ -1,0 +1,31 @@
+---
+title: Archives
+permalink: /archives/
+menu-sort: 2
+---
+<h1>Archives</h1>
+<div class="archives" itemscope itemtype="http://schema.org/Blog">
+{% for post in site.posts %}
+	{% if post.layout == 'post' %}
+		{% capture date %}{{ post.date }}{% endcapture %}
+		{% capture this_year %}{{ date | date: "%Y" }}{% endcapture %}
+		{% unless year == this_year %}
+			{% assign year = this_year %}
+			{% unless forloop.first %}
+				</ul>
+			{% endunless %}
+			<h2 class="year">{{ date | date: "%Y" }}</h2>
+			<ul>
+		{% endunless %}
+		<li>
+			{{ page.date | default:post.date | date: "%Y-%m-%d" }} - <a href="{{ post.url | relative_url }}">{{post.title}}</a>
+			<div class="meta">
+				{% if site.comments.enabled and site.comments.show_count == true %}
+					{% include post/comments_link.html %}
+				{% endif %}
+			</div>
+		</li>
+	{% endif %}
+{% endfor %}
+  </ul>
+</div>

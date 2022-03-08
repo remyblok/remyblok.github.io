@@ -1,0 +1,42 @@
+---
+title: Tags
+permalink: /tags/
+menu-sort: 3
+---
+<h1>Tagged with ...</h1>
+<div id="all-tags" class="all">
+  <a href="#" class="show-all">Show all tags</a>
+  {% assign tags = site.tags | sort %}
+  {% assign styleTags = "" %}
+  {% for tag in tags %}
+    {% assign tagname = tag | first | slugify %}
+    {% assign styleTags = styleTags | append: "#all-tags." | append: tagname | append: " #" | append: tagname | append: ", " %}
+    <div id="{{ tagname }}" class="tag">
+      <h2>{{ tag[0] }}</h2>
+      {% assign posts = tag[1] %}
+      <ul>
+      {% for post in posts %}
+        <li>
+          {{ page.date | default:post.date | date: "%Y-%m-%d" }} - <a href="{{ post.url }}">{{post.title}}</a>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>
+<style>
+  {{ styleTags }} #no-op { display: block; }
+</style>
+
+<script>
+  function applyHash()
+  {
+    var elem = document.getElementById("all-tags");
+    if (window.location.hash)
+      elem.className = window.location.hash.slice(1);
+    else
+      elem.className = "all";
+  }
+  window.addEventListener("hashchange", applyHash, false);
+  applyHash();
+</script>

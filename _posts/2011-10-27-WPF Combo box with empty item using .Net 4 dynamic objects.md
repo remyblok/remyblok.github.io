@@ -1,6 +1,6 @@
 ---
 title: WPF Combo box with empty item using .Net 4 dynamic objects
-tags: [".Net",  "C#", "WPF", "combobox", "dynamic", "dynamic object", "combo box" ]
+tags: [".Net",  "C#", "WPF", "Combobox", "Dynamic"]
 ---
 From the moment I’ve started to use WPF I have struggled to get a selectable empty item in a combo box. This is not something that WPF supports out of the box. I had sincerely hoped they would fix this in WPF 4.0, but unfortunately they did not. They did give us dynamic object, which makes the task a lot easier that it was in WPF 3.5.
 <!--more-->

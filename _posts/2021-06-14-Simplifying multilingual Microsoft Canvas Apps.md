@@ -1,6 +1,6 @@
 ---
 title: Simplifying multilingual Microsoft Canvas Apps
-tags: ["Power Platform",  "Power Apps", "Multilingual", "Languages", "Dataverse", "Internationalization", "i18n", "Canvas Apps" ]
+tags: ["Power Platform",  "Power Apps", "Multilingual", "Languages", "Dataverse", "i18n", "Canvas Apps" ]
 image: /assets/2021-06-14/header.png
 ---
 The [Microsoft Power Platform](https://www.prodwaregroup.com/our-solutions/microsoft-power-platform/) allows us to easily build Apps for our customers and our colleagues. In multi-national organizations this means that your app probably needs to support multiple languages. So how do we do that in Canvas Apps?

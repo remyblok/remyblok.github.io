@@ -12,7 +12,7 @@
         <br>
         <i class="fa-solid fa-user-group"></i> This article is co-authored by 
         {% for coauthor in post.coauthors %}
-            <a class="coauthor" href="coauthor.linkedin">{{ coauthor.name }}</a>
+            <a class="coauthor" href="{{coauthor.linkedin}}">{{ coauthor.name }}</a>
         {% endfor %}
     {% endif %}
 </p>

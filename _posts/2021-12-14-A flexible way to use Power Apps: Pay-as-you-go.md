@@ -6,7 +6,7 @@ coauthors:
   - name: Joop Melchers 
     linkedin: https://www.linkedin.com/in/joopmelchers/
   - name: Mario Arias Escalona
-    linkedin: (https://www.linkedin.com/in/marioariasescalona/
+    linkedin: https://www.linkedin.com/in/marioariasescalona/
 ---
 Microsoft has released a new pricing plan for [Power Apps](https://www.prodwaregroup.com/our-solutions/microsoft-power-platform/microsoft-power-apps/) at [Ignite 2021](https://myignite.microsoft.com/home) called the [Pay-as-you-go plan](https://docs.microsoft.com/en-us/power-platform/admin/pay-as-you-go-overview). Let's delve into what this big change in Power Apps licensing entails.
 

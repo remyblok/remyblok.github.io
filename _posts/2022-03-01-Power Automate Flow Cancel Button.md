@@ -8,7 +8,7 @@ Microsoft Power Automate is very powerful in creating automation flows. There ar
 ## The problem
 As said, there are many ways to trigger a Power Automate Cloud flow. I have had multiple scenario's that caused the flow to be run too much. Here are some scenarios I encountered:
 - The flow is triggered by a change of a Dataverse record. A bulk update was applied to all records in a table. This caused the flow to run thousands of times, for each record once.
-- Create recursive flow calls. By default, Power Automate prevents you from making recursive child flow calls. But using the Request trigger and HTTP calls you can still achieve recursing calls. At times this can be really useful. When you flow has a bug and your recursion never breaks you will end up with thousands of runs which just keep multiplying.
+- Create recursive flow calls. By default, Power Automate prevents you from making recursive child flow calls. But using the Request trigger and HTTP calls you can still achieve recursing calls. At times this can be really useful. When your flow has a bug and your recursion never breaks you will end up with thousands of runs which just keep multiplying.
 
 First thing is to turn off you flow. This won't cancel your current runs, but al least no new runs will be started.
 
@@ -54,7 +54,7 @@ Eventually all flows will be cancelled. A message will show how many flows have 
 
 ![Cancel all Complete](/assets/2022-03-05/cancel-flows-complete.png)
 
-So now there an no longer any running flows left in your history. As said, flows can take a while to actually cancel their running actions. 
+So now there are no longer any running flows left in your history. As said, flows can take a while to actually cancel their running actions. 
 
 ![No more flows](/assets/2022-03-05/no-flows.png)
 
@@ -76,4 +76,4 @@ The best thing is of course to test you flows and try to prevent this action to 
 - Make sure flows are turned off when doing a bulk update.
 - Add a call depth counter and do not run when you get too deep. Now you cannot (easily) go too deep in recursing flows.
 
-At Prodware we find the limits of the technology to get the most out of it. In those cases we need to be creative to solve the issues that we encounter. Using standard tools, like Tampermonkey, to extend a website's functionality is a very useful way to solve these issues. 
+At Prodware we find the limits of the technology to get the most out of it. In those cases we need to be creative to solve the issues that we encounter. Using standard tools, like Tampermonkey, to extend a website's functionality is a very useful way to extend our tools. 

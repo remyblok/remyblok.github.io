@@ -6,6 +6,14 @@ html {
   overflow-y: scroll;
 }
 
+#main-content {
+  p > img:only-child {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
 #posts {
   span.continue {
     font-size: 17px;
@@ -31,7 +39,7 @@ p.meta {
     }
   }
 
-  a:not(:hover) {
+  a:not(:hover), a:hover:after {
     @include themeProperty((
       color: #666 #fafafa,
     ));
@@ -39,6 +47,10 @@ p.meta {
 
   a:not(:last-child):after {
     content: ', ';
+  }
+
+  a:nth-last-child(2):after {
+    content: ' and ';
   }
 }
 

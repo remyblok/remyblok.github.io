@@ -17,10 +17,10 @@ html {
 #posts {
   span.continue {
     font-size: 17px;
-    color: #a895cb;
+    color: var(--light-purple);
 
     &:hover {
-      color: #543c7b;
+      color: var(--dark-purple);
     }
   }
 }
@@ -39,10 +39,12 @@ p.meta {
     }
   }
 
+  a:hover {
+    color: #{ light-dark(var(--dark-purple), var(--light-purple)) };
+  }
+
   a:not(:hover), a:hover:after {
-    @include themeProperty((
-      color: #666 #fafafa,
-    ));
+    color: #{ light-dark(var(--dark-grey), var(--light-grey)) };
   }
 
   a:not(:last-child):after {
@@ -61,9 +63,7 @@ aside .menu {
   }
 
   a:not(:hover) {
-    @include themeProperty((
-      color: #a895cb #fafafa,
-    ));
+    color: #{ light-dark(var(--dark-purple), var(--light-grey)) };
   }
 
   & h1:before{
@@ -76,9 +76,7 @@ aside .menu {
     margin-top: 6px;
 
     a:hover {
-      @include themeProperty((
-        color: #543c7b #a895cb,
-      ));
+      color: #{ light-dark(var(--dark-purple), var(--light-purple)) };
     }
   }
 
@@ -100,9 +98,8 @@ aside .menu {
     position:absolute;
     width: 230px;
     height: 267px;
-    @include themeProperty((
-      box-shadow: (inset 0px 0px 5px 5px #fafafa) (inset 0px 0px 5px 5px #191919)
-    ));
+    box-shadow: inset 0px 0px 5px 5px #{ light-dark(var(--light-grey), var(--darker-grey)) };
+
   }
 }
 

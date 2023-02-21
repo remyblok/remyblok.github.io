@@ -281,7 +281,6 @@ DEPENDENCIES
   github-pages
   jekyll-remote-theme
   jekyll-seo-tag (~> 2.0)
-  tzinfo-data
 
 BUNDLED WITH
    2.3.7

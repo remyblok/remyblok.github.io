@@ -58,13 +58,18 @@ p.meta {
 
 aside .menu {
   h1 {
-    font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+    font-family: 'Architects Daughter', Arial, serif;
     margin: 0.3em 0 0 0;
   }
 
   a:not(:hover) {
     color: #{ light-dark(var(--dark-purple), var(--light-grey)) };
   }
+
+  a:hover {
+    color: #{ light-dark(var(--light-purple), var(--light-purple)) };
+  }
+
 
   & h1:before{
     content: "/";
@@ -75,13 +80,10 @@ aside .menu {
     list-style: '# ';
     margin-top: 6px;
 
-    a:hover {
-      color: #{ light-dark(var(--dark-purple), var(--light-purple)) };
-    }
   }
 
   ::marker {
-    font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+    font-family: Arial, serif;
   }
 }
 

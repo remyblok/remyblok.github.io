@@ -89,7 +89,7 @@ aside .menu {
 
 .profile-pic {
   float: right;
-  width: 230px;
+  width: 220px;
   margin-left: 20px;
   margin: 0 0 12px 12px;
 
@@ -98,8 +98,8 @@ aside .menu {
     display:block;
     content:'';
     position:absolute;
-    width: 230px;
-    height: 267px;
+    width: 220px;
+    height: 220px;
     box-shadow: inset 0px 0px 5px 5px #{ light-dark(var(--light-grey), var(--darker-grey)) };
 
   }
